@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🐱 Cat Mail</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    .mail-box {
+        background: rgba(255,255,255,0.05);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,255,200,0.3);
+        text-align: center;
+        width: 300px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #00ffc8;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #00cfa3;
+        transform: scale(1.05);
+    }
+
+    .message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ffcc70;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.5s ease;
+    }
+
+    .message.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="mail-box">
+    <h1>📬 Cat Mail Inbox 🐾</h1>
+    <p>You have 1 secret message</p>
+
+    <button onclick="openMail()">Open Mail</button>
+
+    <div id="msg" class="message">Meow for me 🐱✨</div>
+</div>
+
+<script>
+    function openMail() {
+        document.getElementById("msg").classList.add("show");
+    }
+</script>
+
+</body>
+</html>
